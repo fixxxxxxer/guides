@@ -17,7 +17,7 @@ This guide will help you execute a simple python code using libmraa.
 2. Conect the Sensors Mezzanine  to DragonBoard 410c through the 40 pin low-speed expansion connector. Mezzanine board (male pins) will match 1-to-1 with female pins on DragonBoard 410c connector. Make sure all 40 pins are lined up properly before moving to next step.
 3. If you wish to use the serial console from your host machine, connect USB cable to host machine and microUSB on mezzanine board (USB Type-A end of cable connects to host machine, microUSB end of cable connects to microUSB port on Mezzanine.
 If you wish to use the Linux Desktop, connect a mouse and a keyboard on the USB ports available on the DragonBoard. USe the HDMI port to connect your device to a monitor. 
-4. Attach the LED to GPIO 8 using the 4 pin cable.
+4. Attach the LED to GPIO 23.
 
 ## Step 2: Software Setup:
 
@@ -42,7 +42,14 @@ This sample code is meant to blink an LED at a certain time interval. Follow the
 $ cd mraa
 $ cd examples
 $ cd python
+$ vim blink-io8.py
+```
+You can go through the code in order to understand what is happening. Since we have connected the LED to GPIO 23, edit that in the code at line 28. 
+```
+x = mraa.Gpio(23)
+```
+Now execute the code
+```
 $ python blink-io8.py
 ```
-
 Congratulations! You have executed your first python code using libmraa.
