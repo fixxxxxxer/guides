@@ -4,7 +4,7 @@ This guide will help you set up your DragonBoard 410c by downloading and install
 
 ## Requirment(s)
 
-1. You must have completed the [Development Setup guide](dev-env-setup)
+1. You must have completed the [Development Setup guide](dev-env-setup.md)
 
 This will ensure you have updated your environment repositories and will have access to libmraa.
 
